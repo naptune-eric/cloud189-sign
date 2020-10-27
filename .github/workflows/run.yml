@@ -60,4 +60,11 @@ jobs:
         ${user_list[$i]}
         ${pwd_list[$i]}
         EOF
+        
+        x = '${{ secrets.MAILUSER }}'
+        y = '${{ secrets.MAILPWD }}'
+        python3 CheckWeb.py <<EOF
+        ${x}
+        ${y}
+        EOF
         done
